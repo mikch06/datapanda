@@ -7,7 +7,6 @@ pd.set_option('display.width', 0)
 pd.set_option('display.max_colwidth', None)
 
 
-
 def read_file(filepath):
     ext = os.path.splitext(filepath)[1].lower()  # Dateiendung ermitteln
     
