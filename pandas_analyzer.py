@@ -1,6 +1,8 @@
 import pandas as pd
 import os
 
+print("Start data analyzer")
+
 # Pandas display properties -> output
 pd.set_option('display.max_rows', None)
 pd.set_option('display.max_columns', None)
