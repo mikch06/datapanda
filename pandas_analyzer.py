@@ -1,12 +1,13 @@
 import pandas as pd
 import os
 
+# Pandas display properties -> output
 pd.set_option('display.max_rows', None)
 pd.set_option('display.max_columns', None)
 pd.set_option('display.width', 0)
 pd.set_option('display.max_colwidth', None)
 
-
+# Read input file types
 def read_file(filepath):
     ext = os.path.splitext(filepath)[1].lower()  # Dateiendung ermitteln
     
