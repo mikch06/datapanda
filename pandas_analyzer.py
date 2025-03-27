@@ -1,6 +1,13 @@
 import pandas as pd
 import os
 
+pd.set_option('display.max_rows', None)
+pd.set_option('display.max_columns', None)
+pd.set_option('display.width', 0)
+pd.set_option('display.max_colwidth', None)
+
+
+
 def read_file(filepath):
     ext = os.path.splitext(filepath)[1].lower()  # Dateiendung ermitteln
     
@@ -14,6 +21,8 @@ def read_file(filepath):
         return pd.read_parquet(filepath)
     else:
         raise ValueError(f"Dateiformat {ext} wird nicht unterstützt.")
+
+
 
 # Verzeichnis rekursiv durchsuchen
 def load_files_recursive(folder_path):
@@ -30,10 +39,18 @@ def load_files_recursive(folder_path):
 
     return dataframes
 
-# Beispielaufruf
+# Example data call
 folder_path = "data"
 dataframes = load_files_recursive(folder_path)
 
-print(dataframes)
-#dataframes.set_option("display.max_rows", None)
-#print(dataframes)
+
+# Loop to print output on std. shell
+for path, df in dataframes.items():
+    print(f"--- File: {path} ---")
+    print(df)
+    print("\n")  # Leerzeile zur Trennung
+
+    # Print all output to output.csv file
+    df.to_csv("output.csv", mode='a')
+
+#print(df.to_string())    
