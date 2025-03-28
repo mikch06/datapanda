@@ -55,4 +55,5 @@ for path, df in dataframes.items():
     # Print all output to output.csv file
     df.to_csv("output.csv", mode='a')
 
+print("Run has finished.")
 #print(df.to_string())    
