@@ -1,5 +1,7 @@
 # Datapanda
 
+First steps to aggregate big data from different sources.
+
 ## Needs:
 - python-pandas library
 - data packages
