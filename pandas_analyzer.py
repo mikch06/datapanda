@@ -11,10 +11,10 @@ pd.set_option('display.max_colwidth', None)
 
 # Read input file types
 def read_file(filepath):
-    ext = os.path.splitext(filepath)[1].lower()  # Dateiendung ermitteln
+    ext = os.path.splitext(filepath)[1].lower()  # Filesuffix find
     
-    if ext in ['.csv', '.txt']:  # CSV oder Textdatei
-        return pd.read_csv(filepath, sep=None, engine='python')  # Automatische Trennung
+    if ext in ['.csv', '.txt']:  # CSV or TXT
+        return pd.read_csv(filepath, sep=None, engine='python')  # Separation
     elif ext in ['.xls', '.xlsx']:  # Excel
         return pd.read_excel(filepath)
     elif ext == '.json':  # JSON
@@ -26,11 +26,11 @@ def read_file(filepath):
 
 
 
-# Verzeichnis rekursiv durchsuchen
+# Recursive directory search
 def load_files_recursive(folder_path):
     dataframes = {}
     
-    for root, _, files in os.walk(folder_path):  # Rekursive Suche
+    for root, _, files in os.walk(folder_path):  # recursive search
         for file in files:
             filepath = os.path.join(root, file)
             try:
