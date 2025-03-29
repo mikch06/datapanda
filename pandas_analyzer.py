@@ -19,10 +19,10 @@ def read_file(filepath):
         return pd.read_excel(filepath)
     elif ext == '.json':  # JSON
         return pd.read_json(filepath)
-    elif ext == '.parquet':  # Parquet
-        return pd.read_parquet(filepath)
+    #elif ext == '.parquet':  # Parquet
+     #   return pd.read_parquet(filepath)
     else:
-        raise ValueError(f"Dateiformat {ext} wird nicht unterstützt.")
+        raise ValueError(f"Format {ext} not supported.")
 
 
 
@@ -37,7 +37,7 @@ def load_files_recursive(folder_path):
                 dataframes[filepath] = read_file(filepath)
                 print(f"✅ {filepath} erfolgreich geladen.")
             except Exception as e:
-                print(f"❌ Fehler beim Laden von {filepath}: {e}")
+                print(f"❌ Load of {filepath} failed: {e}")
 
     return dataframes
 
