@@ -49,13 +49,10 @@ output_file = "output.csv"
 
 # Loop to print output on std. shell
 for path, df in dataframes.items():
-    #print(f"--- File: {path} ---")
-    #print(df)
-    #print("\n")  # Leerzeile zur Trennung
 
     with open(output_file, mode="a", encoding="utf-8") as f:
-        f.write(f"# Datei: {path}\n")
-        
+        f.write(f"# File: {path}\n")
+
     # Print all output to output.csv file
     df.to_csv(output_file, mode='a')
 
