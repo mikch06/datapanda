@@ -45,14 +45,18 @@ def load_files_recursive(folder_path):
 folder_path = "data"
 dataframes = load_files_recursive(folder_path)
 
+output_file = "output.csv"
 
 # Loop to print output on std. shell
 for path, df in dataframes.items():
-    print(f"--- File: {path} ---")
-    print(df)
-    print("\n")  # Leerzeile zur Trennung
+    #print(f"--- File: {path} ---")
+    #print(df)
+    #print("\n")  # Leerzeile zur Trennung
 
+    with open(output_file, mode="a", encoding="utf-8") as f:
+        f.write(f"# Datei: {path}\n")
+        
     # Print all output to output.csv file
-    df.to_csv("output.csv", mode='a')
+    df.to_csv(output_file, mode='a')
 
-print("Run has finished.")
+print("\nRun has finished.")
