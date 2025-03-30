@@ -1,6 +1,9 @@
 import pandas as pd
 import os
 
+# Overall output
+output_file = "output.csv"
+
 print("Start data analyzer")
 
 # Pandas display properties -> output
@@ -45,8 +48,6 @@ def load_files_recursive(folder_path):
 folder_path = "data"
 dataframes = load_files_recursive(folder_path)
 
-output_file = "output.csv"
-
 # Loop to print output on std. shell
 for path, df in dataframes.items():
 
@@ -55,5 +56,4 @@ for path, df in dataframes.items():
 
     # Print all output to output.csv file
     df.to_csv(output_file, mode='a')
-
 print("\nRun has finished.")
