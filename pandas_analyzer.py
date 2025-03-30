@@ -4,6 +4,9 @@ import os
 # Overall output
 output_file = "output.csv"
 
+# Delete output file at startup
+os.remove(output_file)
+
 print("Start data analyzer")
 
 # Pandas display properties -> output
