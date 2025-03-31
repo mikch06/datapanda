@@ -5,7 +5,8 @@ import os
 output_file = "output.csv"
 
 # Delete output file at startup
-os.remove(output_file)
+if os.path.exists(output_file):
+    os.remove(output_file)
 
 print("Start data analyzer")
 
