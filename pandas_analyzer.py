@@ -28,6 +28,8 @@ def read_file(filepath):
         return pd.read_excel(filepath)
     elif ext == '.json':  # JSON
         return pd.read_json(filepath)
+    elif ext in ['.xml']: # XML
+        return pd.read_xml(filepath)
     #elif ext == '.parquet':  # Parquet
      #   return pd.read_parquet(filepath)
     else:
