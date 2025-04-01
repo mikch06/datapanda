@@ -44,7 +44,7 @@ def load_files_recursive(folder_path):
             filepath = os.path.join(root, file)
             try:
                 dataframes[filepath] = read_file(filepath)
-                print(f"✅ {filepath} erfolgreich geladen.")
+                print(f"✅ {filepath} loaded successfully.")
             except Exception as e:
                 print(f"❌ Load of {filepath} failed: {e}")
 
