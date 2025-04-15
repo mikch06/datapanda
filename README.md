@@ -12,3 +12,9 @@ First steps to aggregate big data from different sources.
 - mkdir data
 - copy data files to 'data'
 - run pandas_analyzer.py
+
+
+
+# Visuals with pygwalker
+
+https://github.com/Kanaries/pygwalker
