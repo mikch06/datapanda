@@ -22,4 +22,7 @@ https://github.com/Kanaries/pygwalker
 ## Needs:
 - pip install pygwalker
 
+## Todo:
+- run:
 
+    python3 run_pygwalk.py
