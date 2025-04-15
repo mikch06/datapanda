@@ -18,3 +18,8 @@ First steps to aggregate big data from different sources.
 # Visuals with pygwalker
 
 https://github.com/Kanaries/pygwalker
+
+## Needs:
+- pip install pygwalker
+
+
