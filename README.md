@@ -11,7 +11,9 @@ First steps to aggregate big data from different sources.
 ## Todo:
 - mkdir data
 - copy data files to 'data'
-- run pandas_analyzer.py
+- run:
+
+        pandas_analyzer.py
 
 
 
@@ -25,4 +27,8 @@ https://github.com/Kanaries/pygwalker
 ## Todo:
 - run:
 
-    python3 run_pygwalk.py
+        python3 run_pygwalk.py
+
+
+*Hint:*
+- Remove breakling lines in output.csv - like path titles etc.
