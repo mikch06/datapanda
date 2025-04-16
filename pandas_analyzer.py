@@ -65,3 +65,13 @@ for path, df in dataframes.items():
     # Print all output to output.csv file
     df.to_csv(output_file, mode='a')
 print("\nRun has finished.")
+
+# Loop for pygwalk.csv
+for path, df in dataframes.items():
+
+    with open(output_file, mode="a", encoding="utf-8") as f:
+        f.write(f"# File: {path}\n")
+
+    # Print all output to output.csv file
+    df.to_csv("pygwalk.csv", mode='a')
+print("\nRun has finished.")
