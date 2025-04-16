@@ -56,7 +56,7 @@ def load_files_recursive(folder_path):
 folder_path = "data"
 dataframes = load_files_recursive(folder_path)
 
-# Loop to print output on std. shell
+# Loop to print output_file.
 for path, df in dataframes.items():
 
     with open(output_file, mode="a", encoding="utf-8") as f:
